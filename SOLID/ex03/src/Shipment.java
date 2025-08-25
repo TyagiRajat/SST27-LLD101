@@ -1,4 +1,5 @@
-public class Shipment {
-    String type; double weightKg;
-    Shipment(String type, double w){ this.type=type; this.weightKg=w; }
+public record Shipment(ShippingType type, double weightKg) {
+    public enum ShippingType {
+        STANDARD, EXPRESS, OVERNIGHT
+    }
 }

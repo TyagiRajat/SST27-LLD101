@@ -1,6 +1,8 @@
-public class Rectangle {
-    protected int w,h;
-    void setWidth(int w){ this.w = w; }
-    void setHeight(int h){ this.h = h; }
-    int area(){ return w*h; }
+public record Rectangle(int length, int breadth) implements Polygon
+{
+	public double area()
+	{
+		return length * breadth;
+	}
+
 }

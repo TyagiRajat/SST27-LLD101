@@ -1,5 +1,7 @@
-
-public class Square extends Rectangle {
-    @Override void setWidth(int w){ this.w = this.h = w; }
-    @Override void setHeight(int h){ this.w = this.h = h; }
+public record Square(int length) implements Polygon
+{
+	public double area()
+	{
+		return length * length;
+	}
 }
